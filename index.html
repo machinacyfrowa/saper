@@ -9,4 +9,14 @@
 <body>
     
 </body>
+<script>
+    var gameBoardList = Array();
+    for(var i = 0 ; i < 10 ; i++) {
+        for(var j = 0 ; j < 10; j++) {
+            newPosition = { 'x': i , 'y': j };
+            gameBoardList.push(newPosition);
+        }
+    }
+    console.debug(gameBoardList);
+</script>
 </html>

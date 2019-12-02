@@ -17,6 +17,11 @@
             gameBoardList.push(newPosition);
         }
     }
-    console.debug(gameBoardList);
+    bombList = Array();
+    for(var i = 0 ; i < 10 ; i++) {
+        var randomIndex = Math.floor(Math.random() * gameBoardList.length);
+        bombList.push( gameBoardList.splice(randomIndex, 1)[0] );
+    }
+    console.debug(bombList);
 </script>
 </html>

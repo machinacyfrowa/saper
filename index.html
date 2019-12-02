@@ -41,7 +41,15 @@
                 neighbours.push(neighbour);
             }
         }
-        console.debug(neighbours);
+        //console.debug(neighbours);
+        //policz bomby
+        var bombs = 0;
+        neighbours.forEach(neighbour => {
+            console.log(neighbour);
+            console.log(bombList);
+            if(bombList.includes(neighbour)) bombs++;
+        });
+        console.debug(bombs);
     });
     
 </script>

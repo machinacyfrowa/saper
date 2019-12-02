@@ -31,5 +31,18 @@
         ctx.fillStyle = "#FF0000";
         ctx.fillRect(x, y, 10, 10);
     });
+    //show ammount of bombs in proximity
+    gameBoardList.forEach(tile => {
+        //przygotuj listę przyległych pól
+        var neighbours = Array();
+        for(var i = tile.x-1 ; i <= tile.x+1 ; i++) {
+            for(var j = tile.y-1 ; j <= tile.y+1 ; j++) {
+                neighbour = { 'x': i , 'y': j };
+                neighbours.push(neighbour);
+            }
+        }
+        console.debug(neighbours);
+    });
+    
 </script>
 </html>

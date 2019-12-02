@@ -45,11 +45,21 @@
         //policz bomby
         var bombs = 0;
         neighbours.forEach(neighbour => {
-            console.log(neighbour);
-            console.log(bombList);
-            if(bombList.includes(neighbour)) bombs++;
+            //console.log(neighbour);
+            //console.log(bombList);
+            //if(bombList.includes(neighbour)) bombs++;
+            bombList.forEach(bomb => {
+                if(bomb.x == neighbour.x && bomb.y == neighbour.y) {
+                    //console.log("znalazlem bombe");
+                    bombs++;
+                }
+            });
         });
-        console.debug(bombs);
+        //console.debug(bombs);
+        if(bombs > 0 ) {
+            ctx.fillText(bombs.toString(), tile.x*10, tile.y*10+10); // dlaczego +10?????   
+        }
+        
     });
     
 </script>
